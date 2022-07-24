@@ -7,7 +7,9 @@
     <div v-else>
       <v-row v-if="allMovies.totalResults">
         <v-col cols="12">
-          <div class="total-results caption success--text text-right">Total results: {{allMovies.totalResults}}</div>
+          <div class="total-results caption success--text text-right">
+            Total results: {{ allMovies.totalResults }}
+          </div>
         </v-col>
       </v-row>
 
