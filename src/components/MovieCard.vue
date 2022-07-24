@@ -16,17 +16,12 @@
       <v-row>
         <v-col
           cols="12"
-          lg="4"
+          sm="6"
+          lg="3"
           v-for="movie in allMovies.Search"
           :key="movie.imdbID"
         >
           <div class="movie-card d-flex rounded-lg">
-            <!-- <v-overlay :value="!!overlay[movie.imdbID]">
-              <v-btn class="white--text" color="teal" @click="overlay = false">
-                <v-img :src="movie.Poster" />
-              </v-btn>
-            </v-overlay> -->
-
             <img
               role="button"
               :src="movie.Poster"
@@ -84,7 +79,7 @@ export default {
 <style lang="scss">
 .movie-card {
   overflow: hidden;
-  box-shadow: 0px 0px 4px 1px rgb(0 0 0 / 10%);
+  border: 1px solid #e4e4e4;
   position: relative;
   min-height: 160px;
   .movie-details {

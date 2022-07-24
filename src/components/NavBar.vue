@@ -39,18 +39,24 @@ export default {
     menuItems: [
       {
         id: 0,
-        text: "Home",
+        text: "Movies Lookup",
         icon: "mdi-home",
         link: "/",
       },
       {
         id: 2,
+        text: "My Wishlist",
+        icon: "mdi-clipboard-list",
+        link: "/wishlist"
+      },
+      {
+        id: 3,
         text: "About",
         icon: "mdi-account",
         link: "/about",
       },
       {
-        id: 3,
+        id: 4,
         text: "Settings",
         icon: "mdi-cog",
         link: "/settings",
