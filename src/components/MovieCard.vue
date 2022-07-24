@@ -3,7 +3,14 @@
     <div v-if="allMovies.Error" class="pa-2 red lighten-4">
       {{ allMovies.Error }}
     </div>
+
     <div v-else>
+      <v-row v-if="allMovies.totalResults">
+        <v-col cols="12">
+          <div class="total-results caption success--text text-right">Total results: {{allMovies.totalResults}}</div>
+        </v-col>
+      </v-row>
+
       <v-row>
         <v-col
           cols="12"
@@ -18,7 +25,12 @@
               </v-btn>
             </v-overlay> -->
 
-            <img role="button" :src="movie.Poster" width="100px" @click="openOverlay(movie.imdbID)"/>
+            <img
+              role="button"
+              :src="movie.Poster"
+              width="100px"
+              @click="openOverlay(movie.imdbID)"
+            />
 
             <div class="movie-details d-flex flex-column px-2 body-2 py-4">
               <div class="just-details mb-2">
@@ -51,19 +63,19 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-    data(){
-        return {
-            overlay: {}
-        }
-    },
+  data() {
+    return {
+      overlay: {},
+    };
+  },
   computed: {
     ...mapGetters(["allMovies"]),
   },
   methods: {
     openOverlay(id) {
-        this.overlay[id] = true;
-    }
-  }
+      this.overlay[id] = true;
+    },
+  },
 };
 </script>
 
