@@ -1,12 +1,4 @@
-import axios from "axios";
-
-const URL = "http://www.omdbapi.com/";
-const key = {
-  apikey: "a44cbacc",
-};
-
-const RequestHelper = async (payload) =>
-  await axios.get(URL, { params: { ...payload, ...key } });
+import MovieAPI from '@/api/movies';
 
 const state = {
   movies: [],
@@ -21,22 +13,25 @@ const getters = {
 };
 
 const mutations = {
-  setMovies: (state, payload) => (state.movies = payload),
-  setMovieDetails: (state, payload) => (state.movieDetails = payload),
-  setLoadingMovieDetails: (state, payload) => state.loadingMovieDetails = payload,
+  SET_MOVIES: (state, payload) => (state.movies = payload),
+  SET_MOVIE_DETAILS: (state, payload) => (state.movieDetails = payload),
+  SET_LOADING_MOVIEDETAILS: (state, payload) =>
+    (state.loadingMovieDetails = payload),
 };
 
 const actions = {
   async getMovies({ commit }, payload) {
-    const { data } = await RequestHelper(payload);
-    commit("setMovies", data);
+    const { data } = await MovieAPI.get(payload);
+    commit("SET_MOVIES", data);
   },
+
   async getMovieDetails({ commit }, payload) {
-    const { data } = await RequestHelper(payload);
-    commit("setMovieDetails", data);
+    const { data } = await MovieAPI.get(payload);
+    commit("SET_MOVIE_DETAILS", data);
   },
+
   clearMovieDetails({ commit }) {
-    commit("setMovieDetails", {});
+    commit("SET_MOVIE_DETAILS", {});
   },
 };
 

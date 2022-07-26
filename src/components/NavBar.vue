@@ -1,9 +1,12 @@
 <template>
   <div>
     <v-app-bar elevate-on-scroll scroll-target="#scrolling-2" color="primary">
-      <v-toolbar-title class="white--text" to="/">
-        <span class="font-weight-bold">Movie</span>
-        <span class="font-weight-light">List</span>
+      <v-toolbar-title class="white--text">
+        <div :to="menuItems[0].link">
+          <span class="font-weight-bold">Movie</span>
+          <span class="font-weight-light">List</span>
+
+        </div>
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon
