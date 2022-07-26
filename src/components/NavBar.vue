@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar elevate-on-scroll scroll-target="#scrolling-2" color="primary">
-      <v-toolbar-title class="white--text">
+      <v-toolbar-title class="white--text" to="/">
         <span class="font-weight-bold">Movie</span>
         <span class="font-weight-light">List</span>
       </v-toolbar-title>

@@ -42,8 +42,8 @@
                 <v-btn x-small text class="primary lighten-3 mr-1">
                   <v-icon small>mdi-wikipedia</v-icon>
                 </v-btn>
-                <v-btn x-small text class="primary lighten-3 mr-1">
-                  <v-icon small>mdi-google</v-icon>
+                <v-btn x-small text class="primary lighten-3 mr-1" :to="`movie/${movie.imdbID}`">
+                  More Details
                 </v-btn>
                 <v-btn x-small text rounded class="ms-auto">
                   <v-icon x-small>mdi-plus</v-icon>

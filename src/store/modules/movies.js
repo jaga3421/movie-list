@@ -11,16 +11,19 @@ const RequestHelper = async (payload) =>
 const state = {
   movies: [],
   movieDetails: {},
+  loadingMovieDetails: false,
 };
 
 const getters = {
   allMovies: (state) => state.movies,
   movieDetails: (state) => state.movieDetails,
+  loadingMovieDetails: (state) => state.loadingMovieDetails,
 };
 
 const mutations = {
   setMovies: (state, payload) => (state.movies = payload),
   setMovieDetails: (state, payload) => (state.movieDetails = payload),
+  setLoadingMovieDetails: (state, payload) => state.loadingMovieDetails = payload,
 };
 
 const actions = {

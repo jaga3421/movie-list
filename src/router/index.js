@@ -28,6 +28,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/SettingsView.vue"),
   },
+  {
+    path: "/movie/:id",
+    name: "movieDetails",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/MovieDetailsView.vue"),
+  },
 ];
 
 const router = new VueRouter({
