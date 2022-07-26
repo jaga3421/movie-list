@@ -27,7 +27,7 @@
 
 <script>
 export default {
-    props: ['dialogOpen']
+  props: ["dialogOpen"],
 };
 </script>
 
