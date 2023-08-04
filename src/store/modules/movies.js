@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://www.omdbapi.com/";
+const URL = "https://www.omdbapi.com/";
 const key = {
   apikey: "a44cbacc",
 };
